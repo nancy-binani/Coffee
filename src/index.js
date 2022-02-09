@@ -1,17 +1,11 @@
-import HomePage from "./Pages/HomePage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css"
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-function App() {
-  return (
-    <div className="app">
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<HomePage />}></Route>
-        </Routes>
-      </Router>
-    </div>
-  );
-}
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-export default App;
