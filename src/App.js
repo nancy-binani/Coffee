@@ -1,22 +1,17 @@
-import Heading from './Heading'
-import HorizontalLinearStepper from './HorizontalLinearStepper'
-import Options from './Options'
+import HomePage from "./Pages/HomePage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css"
 
-import React from 'react'
-import Counter from './Counter'
-import './index.css'
-class App extends React.Component{
-  render()
-  {
-    
-    return(
-      <div>
-        <Heading/>
-        <HorizontalLinearStepper/>
-       
-       
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div className="app">
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<HomePage />}></Route>
+        </Routes>
+      </Router>
+    </div>
+  );
 }
+
 export default App;
